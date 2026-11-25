@@ -1,0 +1,420 @@
+:root {
+  --cor-primaria: #0f2a44;      /* Azul marinho institucional */
+  --cor-primaria-escura: #091b2c;
+  --cor-secundaria: #0d9488;    /* Verde-petróleo (destaques e detalhes) */
+  --cor-destaque: #f59e0b;      /* Âmbar (botões de ação) */
+  --cor-destaque-hover: #d97706;
+  --cor-fundo-claro: #f4f7fa;
+  --cor-texto: #1e293b;
+  --fonte-titulo: 'Poppins', sans-serif;
+  --fonte-texto: 'Open Sans', sans-serif;
+}
+
+/* Configurações gerais */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  background-color: #ffffff;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+}
+
+section {
+  scroll-margin-top: 72px;
+}
+
+/* Títulos e etiquetas padrão das seções */
+.etiqueta-secao {
+  display: inline-block;
+  background-color: rgba(13, 148, 136, 0.12);
+  color: var(--cor-secundaria);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+}
+
+.titulo-secao {
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.subtitulo-secao {
+  max-width: 650px;
+  color: #475569;
+}
+
+/* ==========================================================================
+   NAVBAR (MENU DE NAVEGAÇÃO PERSONALIZADO)
+   ========================================================================== */
+.navbar-personalizada {
+  background-color: var(--cor-primaria);
+  box-shadow: 0 4px 14px rgba(15, 42, 68, 0.18);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar-personalizada .navbar-brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-empresa {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-rodape {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navbar-personalizada .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.navbar-personalizada .nav-link:hover,
+.navbar-personalizada .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar-personalizada .nav-link.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cor-destaque);
+  margin-top: 2px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   BOTÕES PERSONALIZADOS
+   ========================================================================== */
+.btn-principal {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-principal:hover,
+.btn-principal:focus {
+  background-color: var(--cor-primaria-escura);
+  border-color: var(--cor-primaria-escura);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-contorno {
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-contorno:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.btn-destaque {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+  color: #0f172a;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-destaque:hover {
+  background-color: var(--cor-destaque-hover);
+  border-color: var(--cor-destaque-hover);
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.btn-filtro {
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.45rem 1.15rem;
+  transition: all 0.2s ease;
+}
+
+.btn-filtro:hover,
+.btn-filtro.ativo {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   CARROSSEL PERSONALIZADO
+   ========================================================================== */
+.carousel-item {
+  height: 460px;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Camada escura sobre a imagem para garantir leitura do texto */
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(9, 27, 44, 0.82), rgba(9, 27, 44, 0.25));
+}
+
+.carousel-caption {
+  z-index: 2;
+  bottom: 2.5rem;
+  text-align: left;
+  max-width: 680px;
+}
+
+.carousel-caption h2 {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.carousel-caption p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 28px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: var(--cor-destaque);
+}
+
+.caixa-boas-vindas {
+  background-color: var(--cor-fundo-claro);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 6px solid var(--cor-secundaria);
+}
+
+/* ==========================================================================
+   CARDS DE SERVIÇOS E SEÇÃO SOBRE NÓS
+   ========================================================================== */
+.secao-servicos {
+  background-color: var(--cor-fundo-claro);
+}
+
+.card-servico {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  border-top: 4px solid var(--cor-secundaria);
+  box-shadow: 0 6px 18px rgba(15, 42, 68, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(15, 42, 68, 0.14);
+}
+
+.card-servico .caixa-imagem-card {
+  height: 205px;
+  overflow: hidden;
+}
+
+.card-servico img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card-servico:hover img {
+  transform: scale(1.05);
+}
+
+.badge-categoria {
+  background-color: rgba(13, 148, 136, 0.14);
+  color: var(--cor-secundaria);
+  font-weight: 700;
+  padding: 0.4rem 0.75rem;
+  border-radius: 50px;
+}
+
+/* Seção Sobre Nós */
+.imagem-sobre {
+  border: 6px solid var(--cor-fundo-claro);
+}
+
+.card-institucional {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 42, 68, 0.05);
+}
+
+.icone-institucional {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(15, 42, 68, 0.08);
+  color: var(--cor-secundaria);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.lista-valores li {
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   SEÇÃO DE CONTATO E FORMULÁRIO PERSONALIZADO
+   ========================================================================== */
+.secao-contato {
+  background-color: var(--cor-fundo-claro);
+}
+
+.painel-contato {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.painel-contato h3 {
+  color: #ffffff;
+}
+
+.icone-contato {
+  color: var(--cor-destaque);
+  margin-top: 2px;
+}
+
+.formulario-contato {
+  border: 1px solid #e2e8f0;
+}
+
+.formulario-contato .form-label {
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.formulario-contato .form-control,
+.formulario-contato .form-select {
+  border-radius: 8px;
+  border-color: #cbd5e1;
+  padding: 0.65rem 0.9rem;
+}
+
+.formulario-contato .form-control:focus,
+.formulario-contato .form-select:focus {
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.2);
+}
+
+/* ==========================================================================
+   MODAL PERSONALIZADO E RODAPÉ
+   ========================================================================== */
+.modal-personalizado {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.modal-personalizado .modal-header {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.modal-personalizado .modal-title {
+  color: #ffffff;
+}
+
+.rodape {
+  background-color: var(--cor-primaria-escura);
+  color: #ffffff;
+}
+
+.rodape h4 {
+  color: #ffffff;
+}
+
+.link-rodape {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-rodape:hover {
+  color: var(--cor-destaque);
+}
+
+.btn-topo {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1030;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   AJUSTES RESPONSIVOS (CELULARES E TABLETS)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .carousel-item {
+    height: 320px;
+  }
+
+  .carousel-caption {
+    bottom: 1.5rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.35rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.92rem;
+  }
+
+  .caixa-boas-vindas {
+    padding: 1.5rem;
+  }
+}

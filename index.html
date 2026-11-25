@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site institucional da empresa com apresentação, serviços, sobre nós e formulário de contato.">
+  <title>Carregando...</title>
+  <link rel="icon" type="image/x-icon" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- ================= CABEÇALHO E MENU DE NAVEGAÇÃO ================= -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada" aria-label="Menu principal">
+      <div class="container">
+        <!-- Nome / Logo da empresa -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+          <img id="nav-logo-empresa" src="img/logo.svg" alt="Logomarca Horizonte Soluções" class="logo-empresa">
+          <span id="nav-nome-empresa">Empresa</span>
+        </a>
+
+        <!-- Botão sanduíche para celulares e tablets -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao"
+          aria-controls="menuNavegacao" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links de navegação -->
+        <div class="collapse navbar-collapse" id="menuNavegacao">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+          <a href="#contato" class="btn btn-destaque ms-lg-3 mt-2 mt-lg-0">
+            Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <main>
+    <!-- Aviso exibido caso o arquivo JSON não possa ser carregado -->
+    <div id="aviso-erro-json" class="container mt-3 d-none" role="alert"></div>
+
+    <!-- SEÇÃO 1: PÁGINA INICIAL (HOME) -->
+    <section id="inicio" class="secao-inicio">
+      <!-- Carrossel de imagens Bootstrap personalizado -->
+      <div id="carrosselEmpresa" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" id="carrossel-indicadores">
+          <!-- Preenchido via JavaScript -->
+        </div>
+
+        <div class="carousel-inner" id="carrossel-slides">
+          <!-- Slides preenchidos via JavaScript -->
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselEmpresa" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosselEmpresa" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+
+      <!-- Apresentação e mensagem de boas-vindas -->
+      <div class="container py-5">
+        <div class="row align-items-center g-4 caixa-boas-vindas">
+          <div class="col-lg-8">
+            <span class="etiqueta-secao">Bem-vindo</span>
+            <h1 class="display-6 fw-bold mt-2 mb-3" id="home-titulo">Apresentação da Empresa</h1>
+            <p class="lead text-muted mb-0" id="home-boas-vindas">
+              Mensagem de boas-vindas carregada pelo JavaScript.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="#servicos" class="btn btn-principal btn-lg mb-2">
+              Conhecer Serviços
+            </a>
+            <a href="#sobre" class="btn btn-contorno btn-lg mb-2">
+              Nossa História
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: DESTAQUE DE PRODUTOS E SERVIÇOS -->
+    <section id="servicos" class="secao-servicos py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="etiqueta-secao">O que fazemos</span>
+          <h2 class="titulo-secao mt-2">Nossos Serviços e Soluções</h2>
+          <p class="subtitulo-secao mx-auto">
+            Conheça as soluções desenvolvidas para atender às necessidades do seu negócio com qualidade e agilidade.
+          </p>
+        </div>
+
+        <!-- Filtros interativos controlados por JavaScript -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" id="filtros-servicos" role="group" aria-label="Filtrar serviços">
+          <!-- Botões de categoria gerados via JavaScript -->
+        </div>
+
+        <!-- Contador dinâmico de serviços exibidos -->
+        <p class="text-center text-muted small mb-4" id="contador-servicos"></p>
+
+        <!-- Grid de Cards Bootstrap -->
+        <div class="row g-4 justify-content-center" id="lista-servicos">
+          <!-- Cards gerados via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: SOBRE NÓS -->
+    <section id="sobre" class="secao-sobre py-5">
+      <div class="container">
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-6">
+            <img id="sobre-imagem" src="img/sobre-nos.jpg" alt="Equipe da empresa trabalhando junta"
+              class="img-fluid rounded-4 shadow-sm imagem-sobre">
+          </div>
+          <div class="col-lg-6">
+            <span class="etiqueta-secao">Sobre Nós</span>
+            <h2 class="titulo-secao mt-2 mb-3" id="sobre-titulo">Quem Somos</h2>
+            <p class="mb-3" id="sobre-historia"></p>
+            <p class="mb-0 text-muted" id="sobre-complemento"></p>
+          </div>
+        </div>
+
+        <!-- Missão, Visão e Valores -->
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="card h-100 card-institucional p-4">
+              <div class="icone-institucional mb-3">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <h3 class="h5 fw-bold">Missão</h3>
+              <p class="mb-0 text-muted" id="sobre-missao"></p>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="card h-100 card-institucional p-4">
+              <div class="icone-institucional mb-3">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h3 class="h5 fw-bold">Visão</h3>
+              <p class="mb-0 text-muted" id="sobre-visao"></p>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="card h-100 card-institucional p-4">
+              <div class="icone-institucional mb-3">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3 class="h5 fw-bold">Valores</h3>
+              <ul class="lista-valores mb-0 ps-3 text-muted" id="sobre-valores">
+                <!-- Itens preenchidos via JavaScript -->
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: CONTATO -->
+    <section id="contato" class="secao-contato py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="etiqueta-secao">Fale Conosco</span>
+          <h2 class="titulo-secao mt-2">Entre em Contato</h2>
+          <p class="subtitulo-secao mx-auto">
+            Tire suas dúvidas ou solicite uma proposta personalizada preenchendo o formulário abaixo.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Informações de contato via JS -->
+          <div class="col-lg-5">
+            <aside class="painel-contato p-4 rounded-4 h-100">
+              <h3 class="h5 fw-bold mb-4">Informações da Empresa</h3>
+
+              <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-geo-alt-fill fs-5 icone-contato"></i>
+                  <div>
+                    <strong class="d-block">Endereço</strong>
+                    <span id="contato-endereco"></span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-telephone-fill fs-5 icone-contato"></i>
+                  <div>
+                    <strong class="d-block">Telefone</strong>
+                    <span id="contato-telefone"></span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-envelope-fill fs-5 icone-contato"></i>
+                  <div>
+                    <strong class="d-block">E-mail</strong>
+                    <span id="contato-email"></span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-clock-fill fs-5 icone-contato"></i>
+                  <div>
+                    <strong class="d-block">Horário de Atendimento</strong>
+                    <span id="contato-horario"></span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="pt-3 border-top border-light border-opacity-25">
+                <p class="small mb-2 fw-semibold">Atendimento rápido</p>
+                <p class="small opacity-75 mb-0">
+                  Retornamos todas as mensagens em até 1 dia útil.
+                </p>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Formulário de contato com validação em JavaScript -->
+          <div class="col-lg-7">
+            <div class="formulario-contato p-4 rounded-4 shadow-sm bg-white h-100">
+              <h3 class="h5 fw-bold mb-3">Envie sua Mensagem</h3>
+
+              <!-- Área de alerta exibida após envio ou erro geral -->
+              <div id="alerta-formulario" class="d-none mb-3" role="alert"></div>
+
+              <form id="formulario-contato" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome completo *</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Ex.: Maria Silva" required>
+                    <div class="invalid-feedback" id="erro-nome">Informe seu nome completo (mínimo 3 letras).</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail *</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ex.: maria@email.com" required>
+                    <div class="invalid-feedback" id="erro-email">Informe um endereço de e-mail válido.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="telefone" class="form-label">Telefone / WhatsApp *</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999" maxlength="15" required>
+                    <div class="invalid-feedback" id="erro-telefone">Informe um telefone válido com DDD.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="assunto" class="form-label">Assunto de interesse *</label>
+                    <select class="form-select" id="assunto" required>
+                      <option value="">Selecione uma opção...</option>
+                      <option value="Orçamento">Solicitar Orçamento</option>
+                      <option value="Consultoria">Consultoria Empresarial</option>
+                      <option value="Tecnologia">Soluções Digitais</option>
+                      <option value="Treinamento">Treinamento e Suporte</option>
+                      <option value="Outros">Outros Assuntos</option>
+                    </select>
+                    <div class="invalid-feedback" id="erro-assunto">Selecione um assunto.</div>
+                  </div>
+
+                  <!-- Mensagem dinâmica exibida pelo evento "change" no JavaScript -->
+                  <div class="col-12 d-none" id="caixa-dica-assunto">
+                    <div class="alert alert-info py-2 px-3 mb-0 small" id="texto-dica-assunto"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="mensagem" class="form-label">Mensagem *</label>
+                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Descreva como podemos ajudar você..." required></textarea>
+                    <div class="invalid-feedback" id="erro-mensagem">Escreva uma mensagem com pelo menos 10 caracteres.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="aceite-termos" required>
+                      <label class="form-check-label small" for="aceite-termos">
+                        Concordo em compartilhar meus dados para retorno do contato.
+                      </label>
+                      <div class="invalid-feedback">Você precisa concordar para enviar o formulário.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 d-flex flex-wrap gap-2 pt-2">
+                    <button type="submit" class="btn btn-principal px-4">
+                      <i class="bi bi-send me-1"></i> Enviar Mensagem
+                    </button>
+                    <button type="reset" class="btn btn-outline-secondary" id="btn-limpar-formulario">
+                      Limpar Campos
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="rodape py-4">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-5">
+          <div class="d-flex align-items-center gap-2 mb-1">
+            <img id="rodape-logo-empresa" src="img/logo.svg" alt="Logomarca Horizonte Soluções" class="logo-rodape">
+            <h4 class="h6 fw-bold mb-0" id="rodape-nome-empresa">Empresa</h4>
+          </div>
+          <p class="small mb-0 opacity-75" id="rodape-info-legal"></p>
+        </div>
+
+        <div class="col-md-4 text-md-center">
+          <ul class="list-inline mb-0 small">
+            <li class="list-inline-item"><a href="#inicio" class="link-rodape">Início</a></li>
+            <li class="list-inline-item"><a href="#servicos" class="link-rodape">Serviços</a></li>
+            <li class="list-inline-item"><a href="#sobre" class="link-rodape">Sobre</a></li>
+            <li class="list-inline-item"><a href="#contato" class="link-rodape">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 text-md-end">
+          <div class="d-inline-flex gap-3 fs-5" id="rodape-redes">
+            <!-- Redes sociais preenchidas via JS -->
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-3 border-light border-opacity-25">
+
+      <div class="text-center small opacity-75">
+        &copy; <span id="rodape-ano"></span> <span id="rodape-copyright-nome"></span>. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL BOOTSTRAP DE DETALHES DO SERVIÇO ================= -->
+  <div class="modal fade" id="modalServico" tabindex="-1" aria-labelledby="modalServicoTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-personalizado">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalServicoTitulo">Detalhes do Serviço</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+              <img id="modalServicoImagem" src="" alt="" class="img-fluid rounded-3 shadow-sm w-100">
+            </div>
+            <div class="col-md-7">
+              <span class="badge badge-categoria mb-2" id="modalServicoCategoria"></span>
+              <p id="modalServicoDescricao" class="mb-3"></p>
+              <h6 class="fw-bold">Principais benefícios:</h6>
+              <ul id="modalServicoBeneficios" class="mb-0 ps-3"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-principal" id="btn-modal-orcamento">
+            Solicitar Orçamento
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão flutuante Voltar ao Topo -->
+  <button type="button" id="btn-voltar-topo" class="btn btn-destaque btn-topo d-none" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

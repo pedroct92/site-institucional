@@ -1,0 +1,103 @@
+{
+  "nome": "Horizonte Soluções",
+  "nomeCurto": "Horizonte Soluções",
+  "logo": "img/logo.svg",
+  "ramoAtuacao": "Consultoria Empresarial, Tecnologia Web e Capacitação Corporativa",
+  "publicoAlvo": "Micro, pequenas e médias empresas (PMEs) que buscam organizar processos, fortalecer sua presença digital e capacitar suas equipes.",
+  "tituloPagina": "Horizonte Soluções | Consultoria e Tecnologia Empresarial",
+  "tituloBoasVindas": "Impulsionamos o crescimento da sua empresa com estratégia e tecnologia",
+  "mensagemBoasVindas": "Bem-vindo à Horizonte Soluções! Ajudamos empresas de todos os portes a organizar processos, modernizar sistemas digitais e capacitar equipes para alcançar resultados consistentes.",
+  "carrossel": [
+    {
+      "imagem": "img/banner-1.jpg",
+      "textoAlternativo": "Equipe trabalhando em escritório moderno",
+      "titulo": "Soluções completas para o seu negócio",
+      "subtitulo": "Atendimento personalizado com foco em eficiência e crescimento sustentável."
+    },
+    {
+      "imagem": "img/banner-2.jpg",
+      "textoAlternativo": "Reunião estratégica em sala corporativa",
+      "titulo": "Planejamento estratégico e inovação",
+      "subtitulo": "Transformamos desafios operacionais em oportunidades reais de mercado."
+    }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "categoria": "Consultoria",
+      "titulo": "Consultoria Estratégica",
+      "imagem": "img/servico-1.jpg",
+      "resumo": "Diagnóstico completo dos processos internos para reduzir custos e aumentar a produtividade.",
+      "descricaoCompleta": "Realizamos uma análise detalhada da operação da sua empresa, identificando gargalos e criando um plano prático de melhorias com metas claras.",
+      "beneficios": [
+        "Mapeamento completo de processos",
+        "Plano de ação com indicadores de desempenho",
+        "Acompanhamento mensal com consultores especialistas"
+      ]
+    },
+    {
+      "id": 2,
+      "categoria": "Tecnologia",
+      "titulo": "Soluções Digitais e Web",
+      "imagem": "img/servico-2.jpg",
+      "resumo": "Criação de sites, portais e sistemas sob medida para modernizar o atendimento ao cliente.",
+      "descricaoCompleta": "Desenvolvemos plataformas web responsivas, seguras e fáceis de usar para que sua empresa marque presença digital e automatize rotinas.",
+      "beneficios": [
+        "Layout adaptado para celulares, tablets e computadores",
+        "Integração com formulários e canais de atendimento",
+        "Código limpo e suporte técnico contínuo"
+      ]
+    },
+    {
+      "id": 3,
+      "categoria": "Treinamento",
+      "titulo": "Capacitação e Suporte",
+      "imagem": "img/servico-3.jpg",
+      "resumo": "Treinamentos práticos para equipes e suporte dedicado para manter tudo funcionando bem.",
+      "descricaoCompleta": "Preparamos sua equipe para utilizar novas ferramentas digitais e boas práticas de atendimento, garantindo autonomia e segurança no dia a dia.",
+      "beneficios": [
+        "Oficinas presenciais ou on-line sob medida",
+        "Material de apoio simples e didático",
+        "Canal de atendimento rápido para dúvidas"
+      ]
+    }
+  ],
+  "sobre": {
+    "titulo": "Uma trajetória construída com confiança e resultados",
+    "imagem": "img/sobre-nos.jpg",
+    "historia": "Fundada em 2018, a Horizonte Soluções nasceu com o propósito de tornar a gestão estratégica e a tecnologia acessíveis para empresas em crescimento.",
+    "complemento": "Ao longo dos últimos anos, atendemos mais de 120 clientes em diversos segmentos, unindo proximidade no relacionamento, transparência e entregas objetivas.",
+    "missao": "Oferecer soluções práticas de gestão e tecnologia que gerem valor real e simplifiquem o dia a dia dos nossos clientes.",
+    "visao": "Ser reconhecida como parceira de confiança no desenvolvimento sustentável e na transformação digital de empresas brasileiras.",
+    "valores": [
+      "Ética e transparência em todas as relações",
+      "Foco em resultados práticos para o cliente",
+      "Inovação com simplicidade",
+      "Respeito e valorização das pessoas"
+    ]
+  },
+  "contato": {
+    "endereco": "Av. Paulista, 1000 - Sala 404, Bela Vista, São Paulo - SP",
+    "telefone": "(11) 3456-7890",
+    "email": "contato@horizontesolucoes.com.br",
+    "horario": "Segunda a Sexta, das 08h30 às 18h00",
+    "cnpj": "00.000.000/0001-00"
+  },
+  "redesSociais": [
+    {
+      "nome": "Instagram",
+      "icone": "bi-instagram",
+      "url": "https://www.instagram.com/"
+    },
+    {
+      "nome": "LinkedIn",
+      "icone": "bi-linkedin",
+      "url": "https://www.linkedin.com/"
+    },
+    {
+      "nome": "WhatsApp",
+      "icone": "bi-whatsapp",
+      "url": "https://web.whatsapp.com/"
+    }
+  ]
+}

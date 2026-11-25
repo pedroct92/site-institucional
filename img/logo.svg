@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Logomarca Horizonte Soluções">
+  <defs>
+    <linearGradient id="fundoLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#096b63"/>
+    </linearGradient>
+  </defs>
+  <!-- Base arredondada da marca -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#fundoLogo)"/>
+  <!-- Sol nascente no horizonte (cor de destaque âmbar) -->
+  <path d="M18 38 A14 14 0 0 1 46 38 Z" fill="#f59e0b"/>
+  <!-- Linha do horizonte e onda de crescimento -->
+  <path d="M10 40 H54" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M14 48 C22 44, 30 44, 38 47 C43 49, 47 48, 50 45" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <!-- Seta ascendente representando estratégia e tecnologia -->
+  <path d="M40 24 L50 14 M42 14 H50 V22" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
